@@ -1,0 +1,81 @@
+\documentclass{article}
+\usepackage{calc}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{eso-pic}
+
+\newlength{\PageFrameTopMargin}
+\newlength{\PageFrameBottomMargin}
+\newlength{\PageFrameLeftMargin}
+\newlength{\PageFrameRightMargin}
+
+\setlength{\PageFrameTopMargin}{0.8cm}
+\setlength{\PageFrameBottomMargin}{0.8cm}
+\setlength{\PageFrameLeftMargin}{0.8cm}
+\setlength{\PageFrameRightMargin}{0.8cm}
+
+\makeatletter
+
+\newlength{\Page@FrameHeight}
+\newlength{\Page@FrameWidth}
+
+\AddToShipoutPicture{
+  \thinlines
+  \setlength{\Page@FrameHeight}{\paperheight-\PageFrameTopMargin-\PageFrameBottomMargin}
+  \setlength{\Page@FrameWidth}{\paperwidth-\PageFrameLeftMargin-\PageFrameRightMargin}
+  \put(\strip@pt\PageFrameLeftMargin,\strip@pt\PageFrameTopMargin){
+    \framebox(\strip@pt\Page@FrameWidth, \strip@pt\Page@FrameHeight){}}}
+
+\makeatother
+
+\begin{document}
+
+\begin{center}
+     {\Huge \underline{Lab Notebook} 
+\end{center}
+    \vspace{1em}
+
+    \begin{center}
+    {\Large
+    \underline{Software Tools and Technology Lab}} 
+    \end{center}
+
+    \vspace{0.4em}
+    
+    \begin{center}
+        {\Large \underline{SEBCA1191}}
+    \end{center}
+
+
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.75\linewidth]{front.PNG}
+    
+    \end{figure}
+
+\vspace{1cm}
+
+\begin{center}
+    
+\setlength{\arrayrulewidth}{0.4mm}
+\setlength{\tabcolsep}{20pt}
+\renewcommand{\arraystretch}{2}
+\begin{tabular}{ |c|c|c| }
+\hline
+\multicolumn{3}{|c|}{\Large \textbf{\textit{Group 24}}} \\
+\hline
+NAME & ROLL NO.& DEPARTMENT \\
+\hline
+Snehal Das [Leader] & 30001223015 & BCA \\
+Nupur Sinha & 30001223002 & BCA \\
+Nikita Debnath & 30001223023 & BCA \\
+Swastik Das & 30001223075 & BCA \\
+Sunit Modak & 30084323005 & BSc in Data Science \\
+
+\hline
+\end{tabular}
+\end{center}
+
+\end{document}

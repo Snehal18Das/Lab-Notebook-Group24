@@ -4,6 +4,14 @@
 \usepackage{float}
 \usepackage{eso-pic}
 
+\usepackage{array}    % For better column alignment
+\usepackage{longtable} % For tables that span multiple pages
+\usepackage{setspace}   % For adjusting line spacing
+\usepackage{booktabs}   % For better looking tables (optional)
+\usepackage{makecell}   % For custom cell formatting, especially for headings
+\usepackage{hyperref}
+
+
 \newlength{\PageFrameTopMargin}
 \newlength{\PageFrameBottomMargin}
 \newlength{\PageFrameLeftMargin}
@@ -13,6 +21,10 @@
 \setlength{\PageFrameBottomMargin}{0.8cm}
 \setlength{\PageFrameLeftMargin}{0.8cm}
 \setlength{\PageFrameRightMargin}{0.8cm}
+
+% Increase padding inside cells
+\renewcommand\arraystretch{2} % Increase row height
+\setlength{\tabcolsep}{12pt}    % Increase horizontal padding (space between text and cell border)
 
 \makeatletter
 
@@ -31,7 +43,7 @@
 \begin{document}
 
 \begin{center}
-     {\Huge \underline{Lab Notebook} 
+    \Huge \underline{Lab Notebook}
 \end{center}
     \vspace{1em}
 
@@ -76,6 +88,43 @@ Sunit Modak & 30084323005 & BSc in Data Science \\
 
 \hline
 \end{tabular}
+\end{center}
+
+\newpage
+
+\begin{center}
+    \Huge{\textit{\textbf{Index Page}}}
+
+\vspace{1.1cm}
+\end{center}
+
+
+% Define the table with width 80% of textwidth
+\begin{center}
+    
+\large \begin{longtable}{|p{0.08\textwidth}|p{0.13\textwidth}|p{0.45\textwidth}|p{0.145\textwidth}|}
+    \hline
+    \textbf{\Large S.No.} & \textbf{\Large Subject} & \textbf{\Large Description} & \textbf{\Large Pages} \\
+    \hline
+    \endfirsthead
+    \hline
+    \textbf{\Large S.No.} & \textbf{\Large Subject} & \textbf{\Large Description} & \textbf{\Large Pages} \\
+    \hline
+    \endhead
+    \hline
+    1 & Calculator & Download GitHub desktop in your system, create a local repository. Build a C programme of calculator in the local repository, commit and publish it as a public repository. & 3-4 \\
+    \hline
+    2 & Sections and Subsections & How to create sections and subsection in LaTeX in a proper manner. & 5-6 \\
+    \hline
+    3 & CV using LaTeX & Your task is to create your CV using LaTeX documen & 7-8 \\
+    \hline
+    4 & Mathematical Document & Your task is to create your LaTeX document. 
+    The document should be formatted to look exactly like an attachment. & 9-10 \\
+    \hline
+    5 & Git Branching and Merging & A hands-on task to understand and implement Branching, Merging, conflict resolution in Git. & 11-12 \\
+    
+    
+\end{longtable}
 \end{center}
 
 \end{document}

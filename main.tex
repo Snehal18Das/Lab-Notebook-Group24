@@ -189,5 +189,95 @@ The task was achieved by following the below mentioned steps:-
     \caption{Output}
 \end{figure}
 
+\newpage
+
+\begin{center}
+    \LARGE{\textbf{2. \underline{Lab Assignment by Nupur Sinha}}}
+\end{center}
+\vspace{0.2cm}
+ \begin{center}
+     \section*{\underline{How to create Matrix in LaTeX}}
+\end{center}
+\LARGE{To create a matrix in LaTeX, we use the \texttt{\textbf{amsmath}} package, which provides various environments for displaying matrices. Here’s a basic guide on how to create a matrix and the different options available:}
+\vspace{0.1cm}
+\begin{center}
+\begin{itemize}
+    \item{\underline{\textbf{Include the \texttt{amsmath} Package}}}
+\end{itemize} 
+\end{center}
+First, ensure you have the \texttt{amsmath} package included in your LaTeX document preamble. Add the following line:
+\begin{verbatim}
+\usepackage{amsmath}
+\end{verbatim}
+\begin{center}
+    \begin{itemize}
+        \item {\textbf{\underline{Matrix Environments}}}
+    \end{itemize}
+\end{center}
+\LARGE{
+There are several environments for creating matrices, depending on how you want them formatted. Here are the most common ones:}
+
+\begin{itemize}
+  \item \texttt{matrix}: A basic matrix without brackets.
+  \item \texttt{bmatrix}: A matrix with square brackets.
+  \item \texttt{pmatrix}: A matrix with parentheses.
+  \item \texttt{vmatrix}: A matrix with vertical bars.
+  \item \texttt{Vmatrix}: A matrix with double vertical bars.
+\end{itemize}
+\begin{center}
+        \item {\textbf{\underline{\LARGE{Syntax}}}}
+\end{center}
+
+\LARGE{The syntax for creating a matrix is similar across different environments. Use the \texttt{\textbackslash begin\{environment\}} and \texttt{\textbackslash end\{environment\}} commands to enclose the matrix content. Separate the elements in each row with \texttt{\&} and 
+
+end each row with \texttt{\\}.
+
+Here’s an example of a 2x2 matrix in each environment:}
+\begin{verbatim}
+[ 
+$ \begin{matrix}
+    1 & 0 \\
+    0 & 1 
+\end{matrix}
+$ ]
+
+\begin{bmatrix}   [
+ $   \begin{matrix}
+    1 & 0\\
+    0 & 1
+    \end{matrix}
+ $   ]
+
+a_{11} & a_{12} \\
+a_{21} & a_{22}
+\end{bmatrix}
+
+\begin{pmatrix}
+a_{11} & a_{12} \\
+a_{21} & a_{22}
+\end{pmatrix}
+
+\begin{vmatrix}
+a_{11} & a_{12} \\
+a_{21} & a_{22}
+\end{vmatrix}
+
+\begin{Vmatrix}
+a_{11} & a_{12} \\
+a_{21} & a_{22}
+\end{Vmatrix}
+\end{verbatim}
+
+\begin{center}
+\section*{\textbf{\underline{\LARGE{Explanation}}}}
+\end{center}
+\begin{itemize}
+  \item \texttt{\textbackslash begin\{matrix\} ... \textbackslash end\{matrix\}}: Creates a matrix with no surrounding brackets.
+  \item \texttt{\textbackslash begin\{bmatrix\} ... \textbackslash end\{bmatrix\}}: Surrounds the matrix with square brackets.
+  \item \texttt{\textbackslash begin\{pmatrix\} ... \textbackslash end\{pmatrix\}}: Surrounds the matrix with parentheses.
+  \item \texttt{\textbackslash begin\{vmatrix\} ... \textbackslash end\{vmatrix\}}: Surrounds the matrix with single vertical bars, often used to denote determinants.
+  \item \texttt{\textbackslash begin\{Vmatrix\} ... \textbackslash end\{Vmatrix\}}: Surrounds the matrix with double vertical bars, also used for determinants or norms.
+\end{itemize}
+
 
 \end{document}

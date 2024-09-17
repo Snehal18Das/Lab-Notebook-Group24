@@ -11,6 +11,10 @@
 \usepackage{makecell}   % For custom cell formatting, especially for headings
 \usepackage{hyperref}
 
+\usepackage{ulem}
+\usepackage{amsmath}\
+\usepackage[a4paper, margin=1 in]{geometry}
+
 
 \newlength{\PageFrameTopMargin}
 \newlength{\PageFrameBottomMargin}
@@ -278,6 +282,351 @@ a_{21} & a_{22}
   \item \texttt{\textbackslash begin\{vmatrix\} ... \textbackslash end\{vmatrix\}}: Surrounds the matrix with single vertical bars, often used to denote determinants.
   \item \texttt{\textbackslash begin\{Vmatrix\} ... \textbackslash end\{Vmatrix\}}: Surrounds the matrix with double vertical bars, also used for determinants or norms.
 \end{itemize}
+
+
+\newgeometry{top=1 in}
+\begin{normalsize}
+    
+
+\section{\centering{\uline{My LATEX Document and Mathematical Notation}}}
+    \vspace{.5cm}
+    \centerline{LATEX File}
+    \vspace{.5cm}
+    \centerline{Nikita Debnath}
+    \vspace{.5cm}
+    \subsection{\uline{Description:}}
+    \begin{enumerate}
+        \item At first we have to create a overleaf account.
+        \item Then create a new blank file and the write down the code.
+    \end{enumerate}
+
+    
+    \subsection{\uline{Steps:}}
+    \begin{enumerate}
+    \item \textbf{Basic LaTeX Document Structure:}
+    \\
+    Every LaTeX document starts with \verb|{\begin{document}| and ends with \verb|{\end{document}|. This structure defines how the document will be formatted and organized.
+
+    \item \textbf{Document Type, Title, Author, and Photo Integration:}  
+    \\ 
+    To define the type of the document, we have to use \verb|\documentclass{article}|. Use the \verb|\title|, \verb|\author|, and \verb|\date| commands to display document metadata. Insert photos using the graphicx package and \verb|\includegraphics{image_file_name.jpg}| command.
+    \begin{enumerate}
+    \item Input:
+    \begin{verbatim}
+        \documentclass{article}
+        \usepackage{graphicx} 
+        \title{My First LATEX Doucument}
+        \date{\today}
+        \author{Nikita Debnath}
+        \date{September 2024}
+        \begin{document}
+        \maketitle
+        \begin{center}
+        \includegraphics[width=0.3\textwidth]{n.jpg}   
+        \end{center}
+        \end{document}
+    \end{verbatim}
+    \item Output :
+    \begin{flushleft}
+        \includegraphics[width=0.3\textwidth]{basic_sturcture.png}
+    \end{flushleft}         
+    \end{enumerate}
+
+    \item \textbf{Formatting and Bulleted Lists:}
+    \\
+    LaTeX offers various environments like itemize and enumerate for lists, and basic text can be formatted into sections and subsections with proper headers.
+    \begin{enumerate}
+        \item \textbf{Section :}
+        \\
+        The \verb|\section{}| command creates a new section. Sections are the highest-level divisions within a document (after chapters if you're using a book class). It is usually numbered and serves as a top-level heading.
+        \begin{enumerate}
+            \item \textbf{Syntax:}
+            \begin{verbatim}
+                \section{Introcuction}
+                This is the start of a new section.
+            \end{verbatim}
+        \end{enumerate}
+        \item \textbf{Subsection:}
+        \\
+        A \verb|\subsection{}|is a sub-division of a section. It creates a smaller heading under the main section.
+        \begin{enumerate}
+            \item \textbf{Syntax:}
+            \begin{verbatim}
+                \subsection{sub section}
+                This is a subsection within the "Introduction"section.
+            \end{verbatim}
+        \end{enumerate}
+        \item \textbf{Sub-subsection:} 
+        \\
+        A \verb|\subsubsection{}| is a further subdivision of a subsection. It is used when you need more detailed hierarchical organization.
+        \begin{enumerate}
+            \item \textbf{Syntax:}
+            \begin{verbatim}
+                \subsubsection{Background}
+                 This is a subsubsection under the "Subsection" subsection.
+            \end{verbatim}
+        \end{enumerate}
+        \item \textbf{Bullet List:}
+        \\
+        LaTeX uses the itemize environment to create unordered (bullet) lists.
+        \begin{enumerate}
+            \item \textbf{Syntax:}
+            \begin{verbatim}
+                \begin{itemize}
+                \item First bullet point
+                \item Second bullet point
+                \item Third bullet point
+                \end{itemize}
+            \end{verbatim}
+        \end{enumerate}
+        This will produce a bullet list with three items.
+        \item \textbf{Syntax:}
+        \\
+        \begin{verbatim}
+            documentclass{article}
+            \begin{document}
+            \section{Introduction}
+            This is the introduction section.
+            \subsection{Motivation}
+            This subsection explains the motivation.
+            \subsubsection{Background}
+            Here is the background information.
+            \section{Conclusion}
+            Here is a bullet list summarizing key points:
+            \begin{itemize}
+                \item Point one
+                \item Point two
+                \item Point three
+            \end{itemize}
+            \end{document}
+        \end{verbatim}
+        \item \textbf{Output:}
+        \begin{flushleft}
+        \includegraphics[width=0.4\textwidth]{subsection-bullet.png}
+    \end{flushleft}  
+    \end{enumerate}
+    
+    \item Mathematical Expressions, Superscripts, Subscripts, and Greek Letters: 
+    LaTeX excels at typesetting mathematical symbols using \verb|\usepackage{amsmath}| or inline display math mode with commands like \verb|$a^b$| for superscripts and \verb|$x_i$| for subscripts.
+    \begin{enumerate}
+        \item \textbf{Subscript:}
+        \\
+        Subscripts are used to write smaller text or numbers below the main text.Its writes by underscore.
+        \begin{enumerate}
+            \item \textbf{Syntax:}
+            \begin{verbatim}
+                $x_i$
+            \end{verbatim}
+            \item \textbf{Output:}
+            \\
+            $x_i$
+        \end{enumerate}
+        
+        \item \textbf{Superscripts:}
+        \\
+        Superscripts are used to write text or numbers above the main text (for powers or exponents).
+        \begin{enumerate}
+            \item \textbf{Syntax:}
+            \begin{verbatim}
+                $x^i$
+            \end{verbatim}
+            \item \textbf{Output:}
+            \\
+            $x^i$
+        \end{enumerate}
+
+       \item \textbf{Equation Environment:}
+        \\
+        \begin{enumerate}
+        \item The equation environment is used for displaying equations that are centered and automatically numbered.
+  
+            \begin{enumerate}
+                \item \textbf{Syntax:}
+            \begin{verbatim}
+                \begin{equation}
+                    x = 1
+                \end{equation}
+            \end{verbatim}
+            \item \textbf{Output:}
+            \\
+            \begin{equation}
+                    x = 1
+            \end{equation}  
+            \end{enumerate}
+            
+        \item This will display the equation  and number it.If you want to avoid numbering the equation, use the syntax -
+        \begin{enumerate}
+            \item \textbf{Syntax:}
+            \begin{verbatim}
+                \begin{equation*}
+                    x = 1
+                \end{equation*}
+            \end{verbatim}
+            \item \textbf{Output:}
+            \\
+            \begin{equation*}
+                    x = 1
+            \end{equation*}
+        \end{enumerate}           
+        \end{enumerate}
+        \item \textbf{Align Environment, Fraction, Square-root:}
+        \\
+        \begin{enumerate}
+        \item The align environment is used for aligning multiple equations. It allows you to align equations at the \& symbol.
+        To create fractions, use the \verb|\frac{numerator}{denominator}| command.You can create square roots using the \verb|\sqrt{}| command. If you want an nth root, use \verb|\sqrt[n]{}|.
+
+  
+            \begin{enumerate}
+                \item \textbf{Syntax:}
+            \begin{verbatim}
+                \begin{align}
+                x + y &= 5 \\
+                g(x) &= \frac{1}{x}\\
+                F(x) &= \intˆa_b\frac{1}{3}xˆ3
+                y &= \sqrt{a}\\
+                z &= \sqrt[n]{a}
+                \end{align}
+            \end{verbatim}
+            \item \textbf{Output:}
+            \\
+                \begin{align}
+                x + y &= 5 \\
+                g(x) &= \frac{1}{x}\\
+                F(x) &= \int^a_b\frac{1}{3}x^3\\
+                y &= \sqrt{a}\\
+                z &= \sqrt[n]{a}
+                \end{align} 
+            \end{enumerate}
+            
+        \item This will display the equation  and number it.If you want to avoid numbering the equation, use the syntax -
+        \begin{enumerate}
+            \item \textbf{Syntax:}
+            \begin{verbatim}
+                \begin{align*}
+                x + y &= 5 \\
+                g(x) &= \frac{1}{x}\\
+                F(x) &= \int^a_b\frac{1}{3}x^3
+                y &= \sqrt{a}\\
+                z &= \sqrt[n]{a}
+                \end{align*}
+            \end{verbatim}
+            \item \textbf{Output:}
+            \\
+                \begin{align*}
+                x + y &= 5 \\
+                 g(x) &= \frac{1}{x}\\
+                F(x) &= \int^a_b\frac{1}{3}x^3\\
+                y &= \sqrt{a}\\
+                z &= \sqrt[n]{a}
+                \end{align*}
+        \end{enumerate}           
+        \end{enumerate}
+        
+    \item \textbf{Matrix:}
+        \\
+        To create matrices, you can use the bmatrix (for brackets around the matrix), pmatrix (for parentheses around the matrix), or matrix environment.
+        \begin{enumerate}
+            \item \textbf{Syntax:}
+            \begin{verbatim}
+                $\begin{matrix}
+                    a & b \\
+                    c & d
+                \end{matrix}$
+                \\
+                $\begin{bmatrix}
+                a & b \\
+                c & d
+                \end{bmatrix}$
+                \\
+                $\begin{pmatrix}
+                 a & b \\
+                 c & d
+                \end{pmatrix}$
+            \end{verbatim}
+            \item \textbf{Output:}
+            \\
+                $\begin{matrix}
+                    a & b \\
+                    c & d
+                \end{matrix}$
+                \\
+                $\begin{bmatrix}
+                a & b \\
+                c & d
+                \end{bmatrix}$
+                \\
+                $\begin{pmatrix}
+                 a & b \\
+                 c & d
+                \end{pmatrix}$
+         \end{enumerate}
+
+    \item \textbf{Table:}
+        \\
+        Tables can be created using the tabular environment. Here's an example of a simple table:
+        \begin{enumerate}
+            \item \textbf{Syntax:}
+            \begin{verbatim}
+                \begin{tabular}{|c|c|}
+                \hline
+                Element & Value \\
+                \hline
+                1 & 10 \\
+                \hline
+                2 & 20 \\
+                \hline
+                3 & 30 \\
+                \hline
+                \end{tabular}
+            \end{verbatim}
+            \item \textbf{Output:}
+            \\
+             \begin{tabular}{|c|c|}
+                \hline
+                Element & Value \\
+                \hline
+                1 & 10 \\
+                \hline
+                2 & 20 \\
+                \hline
+                3 & 30 \\
+                \hline
+                \end{tabular}
+        \end{enumerate}
+
+     
+        \item \textbf{Trigonometric Functions (sin, cos, tan, theta):}
+        \\
+        LaTeX provides built-in commands for common trigonometric functions and Greek letters like 
+        \begin{enumerate}
+            \item \textbf{Syntax:}
+            \begin{verbatim}
+                $\sin \theta$
+                \\
+                $\cos \theta$
+                \\
+                $\tan \theta$
+            \end{verbatim}
+            \item \textbf{Output:}
+            \\
+             $\sin \theta$
+             \\
+             $\cos \theta$
+             \\
+             $\tan \theta$
+        \end{enumerate}
+
+
+
+    \end{enumerate}
+
+        
+    \end{enumerate}
+
+\end{normalsize}
+\restoregeometry
+
+
 
 
 \end{document}
